@@ -40,7 +40,7 @@ public class AppMain_battle extends AppCompatActivity {
     //ボタンが二回押されたかの判定で使う変数
     int buttonFlag = 0;
     TextView Hp;
-    MediaPlayer bgm;
+    MediaPlayer batelebgm;
     //      乱数(HP)
     Random r = new Random();
     Random r1 = new Random();
@@ -132,9 +132,9 @@ public class AppMain_battle extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         //リソースファイルから再生
-        bgm = MediaPlayer.create(this, R.raw.battle);
-        bgm.start();
-        bgm.setLooping(true);
+        batelebgm = MediaPlayer.create(this, R.raw.battle);
+        batelebgm.start();
+        batelebgm.setLooping(true);
         // 予め音声データを読み込む
         soundPool1 = new SoundPool(50, AudioManager.STREAM_MUSIC, 0);
         soundId1 = soundPool1.load(getApplicationContext(), R.raw.short_punch1, 1);
@@ -154,7 +154,7 @@ public class AppMain_battle extends AppCompatActivity {
 
     protected void onPause() {
         super.onPause();
-        bgm.pause();
+        batelebgm.pause();
     }
 
 //    protected void localBgmStop() {
@@ -197,7 +197,7 @@ public class AppMain_battle extends AppCompatActivity {
 //            バトル選択時の処理
             case R.id.main_battle:
                 Log.d("aaaa", "battle" );
-stmn+=1000;
+//stmn+=1000;
                 if (buttonFlag == 0) {
                     battle = (ImageButton) findViewById(R.id.main_battle);
                     battle.setImageResource(R.drawable.main_battle2);

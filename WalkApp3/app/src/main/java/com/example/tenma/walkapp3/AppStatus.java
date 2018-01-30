@@ -154,11 +154,11 @@ public class AppStatus extends AppCompatActivity{
         editor.putString("seibetu",seibetuString);
         editor.commit();
 
-        Intent intent = new Intent(this, Batle_Start.class);
-        //遷移先の画面を起動
-        startActivity(intent);
+//        Intent intent = new Intent(this, Batle_Start.class);
+//        //遷移先の画面を起動
+//        startActivity(intent);
 
-//        finish();
+        finish();
     }
     @Override
     public boolean dispatchKeyEvent(KeyEvent event) {
