@@ -22,7 +22,7 @@ import android.widget.ImageView;
  * Created by yuuma on 2017/12/18.
  */
 
-public class die extends AppCompatActivity {
+public class die extends ActivityAddToData {
     TextView tv1;
     private SoundPool soundPool;
     private int soundId;
@@ -57,6 +57,7 @@ public class die extends AppCompatActivity {
 
         int imageWidth2 = bitmap111.getWidth();
         int imageHeigh2 = bitmap111.getHeight();
+
         // Matrix インスタンス生成
         Matrix matrix = new Matrix();
         Matrix matrix1 = new Matrix();
